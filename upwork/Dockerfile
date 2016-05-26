@@ -16,9 +16,8 @@ FROM debian:jessie
 
 MAINTAINER Petr Shevtsov <petr.shevtsov@gmail.com>
 
-ENV VERSION v4_0_144_0_mj9j7zmoj9asg5f0
+ENV VERSION v4_1_314_0_0bo6g5kfbj07y2x4
 
-ADD http://ftp.acc.umu.se/mirror/cdimage/snapshot/Debian/pool/main/libg/libgcrypt11/libgcrypt11_1.5.3-5_amd64.deb /src/libgcrypt11.deb
 ADD http://updates.team.odesk.com/binaries/${VERSION}/upwork_amd64.deb /src/upwork_amd64.deb
 
 RUN apt-get update && apt-get install -y \
@@ -40,7 +39,6 @@ RUN apt-get update && apt-get install -y \
     libxss1 \
     libxtst6 \
     --no-install-recommends \
-    && dpkg -i /src/libgcrypt11.deb \
     && dpkg -i /src/upwork_amd64.deb \
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf /src/*.deb
