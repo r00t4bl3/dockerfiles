@@ -10,7 +10,7 @@
 #       --device /dev/snd \ # so we have sound
 #       -v /dev/shm:/dev/shm \
 #       --name upwork \
-#       pshevtsov/upwork
+#       r00t4bl3/upwork
 
 FROM debian:jessie
 
