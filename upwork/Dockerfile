@@ -18,7 +18,7 @@ MAINTAINER r00t4bl3 <r00t4bl3@gmail.com>
 
 ENV VERSION v4_1_351_0_a7qf2qa9wn508n52
 
-ADD http://updates.team.odesk.com/binaries/${VERSION}/upwork_amd64.deb /src/upwork_amd64.deb
+ADD http://updates-desktopapp.upwork.com/binaries/${VERSION}/upwork_amd64.deb /src/upwork_amd64.deb
 
 RUN apt-get update && apt-get install -y \
     gconf-service \
